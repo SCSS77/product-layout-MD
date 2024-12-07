@@ -9,7 +9,7 @@ function showSection(sectionId) {
         selectedSection.classList.remove('hidden');
     }
 
-    const links = document.querySelectorAll('.tabs2 ul li');
+    const links = document.querySelectorAll('.app_tabs-item');
     links.forEach(link => {
         link.classList.remove('is-active');
     });
