@@ -19,3 +19,5 @@ function showSection(sectionId) {
         activeLink.classList.add('is-active');
     }
 }
+
+window.showSection = showSection;
