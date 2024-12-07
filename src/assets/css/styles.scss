@@ -4,10 +4,33 @@
 
 .sidebar-bg {
     background-color: lightblue;
-    flex: 0 0 calc(25% - 8px);
 }
 
 .content-bg {
     background-color: #333;
-    flex: 0 0 calc(75% - 8px);
+}
+
+.sidebar-bg, 
+.content-bg {
+    align-items: center;
+    flex: 0 0 100%;
+    min-height: 52px;
+}
+
+footer {
+    background-color: #DDD;
+    align-items: center;
+    flex: 0 0 100%;
+    min-height: 52px;
+}
+
+@media (min-width: 768px) {
+    
+    .sidebar-bg {
+        flex: 0 0 calc(25% - 8px);
+    }
+
+    .content-bg {
+        flex: 0 0 calc(75% - 8px);
+    }
 }
