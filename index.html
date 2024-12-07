@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Prueba Técnica - Massimo Dutti IT</title>
+        <link rel="stylesheet" href="/node_modules/holygrail2/dist/style.min.css">
+        <link rel="stylesheet" href="css/styles.min.css">
+    </head>
+
+    <body>
+        <header class="header-bg col-xs is-flexinline text-center p-16 height-lg mb-16">
+            <nav class="tabs2 ttu">
+                <ul class="content-center">
+                    <li class="is-active"><a class="btn btn-tertiary" href="javascript:void(0);" onclick="showSection('section1')">Section 1</a></li>
+                    <li><a class="btn btn-tertiary" href="javascript:void(0);" onclick="showSection('section2')">Section 2</a></li>
+                    <li><a class="btn btn-tertiary" href="javascript:void(0);" onclick="showSection('section3')">Section 3</a></li>
+                </ul>
+            </nav>
+
+            <div class="align-multi-center height-md">
+                <h1 class="h2 mb-24">Creación de un layout estructural con cambio de orden</h1>
+                <button class="btn btn-primary btn--xlarge mb-24">Lorem ipsum</button>
+            </div>
+        </header>
+
+        <section id="section1" class="is-flex card mb-16">
+            <div class="p-16 mr-16 sidebar-bg"></div>
+            <div class="p-16 font-semibold c-white font-family-c content-bg">03. </div>
+        </section>   
+
+        <section id="section2" class="hidden">
+            <h2>Pieza de Producto</h2>
+            <div class="product-piece">
+                <img src="https://via.placeholder.com/300x450" alt="Producto 1">
+                <h3>Producto 1</h3>
+                <p>Descripción breve del producto.</p>
+                <p class="price">€99,99</p>
+            </div>
+
+            <div class="product-piece">
+                <img src="https://via.placeholder.com/300x450" alt="Producto 2">
+                <h3>Producto 2</h3>
+                <p>Descripción breve del producto.</p>
+                <p class="price">€79,99</p>
+            </div>
+        </section>
+
+        <section id="section3" class="hidden">
+            <h2>Layout tipo Parrilla de Productos</h2>
+            <div class="row">
+                <div class="col-3">
+                    <div class="product-piece">
+                        <img src="https://via.placeholder.com/300x450" alt="Producto 3">
+                        <h3>Producto 3</h3>
+                        <p>Descripción breve del producto.</p>
+                        <p class="price">€59,99</p>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="product-piece">
+                        <img src="https://via.placeholder.com/300x450" alt="Producto 4">
+                        <h3>Producto 4</h3>
+                        <p>Descripción breve del producto.</p>
+                        <p class="price">€89,99</p>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="product-piece">
+                        <img src="https://via.placeholder.com/300x450" alt="Producto 5">
+                        <h3>Producto 5</h3>
+                        <p>Descripción breve del producto.</p>
+                        <p class="price">€49,99</p>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="product-piece">
+                        <img src="https://via.placeholder.com/300x450" alt="Producto 6">
+                        <h3>Producto 6</h3>
+                        <p>Descripción breve del producto.</p>
+                        <p class="price">€79,99</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer"></footer>
+        
+        <script src="js/script.js"></script>
+    </body>
+</html>

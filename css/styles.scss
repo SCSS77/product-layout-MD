@@ -1,0 +1,13 @@
+.header-bg {
+    background-color: lightcoral;
+}
+
+.sidebar-bg {
+    background-color: lightblue;
+    flex: 0 0 calc(25% - 8px);
+}
+
+.content-bg {
+    background-color: #333;
+    flex: 0 0 calc(75% - 8px);
+}
