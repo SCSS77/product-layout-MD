@@ -1,0 +1,17 @@
+# Node.js
+node_modules/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+
+# Cache and temporary files
+*.log
+*.tmp
+
+# Builds (if applicable)
+dist/
+*.min.css
