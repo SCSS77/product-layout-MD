@@ -1,3 +1,27 @@
+// Variables
+$special-price-bg: rgb(255, 206, 78);
+$special-price-text: black;
+
+// Fonts
+@font-face {
+    font-family: 'dutti-daily-regular';
+    src: url('/src/fonts/dutti-daily-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Global Styles
+body {
+    font-family: "dutti-daily-regular", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    -webkit-overflow-scrolling: touch;
+    font-variant-ligatures: no-common-ligatures;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Components
 .header-bg {
     background-color: lightcoral;
 }
@@ -39,13 +63,33 @@
     list-style: none;
 }
 
-.card9-wrap {
-    position: relative !important;
-    opacity: 1 !important;
+.product-title a {
+    display: block;
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.card9-wrap-details {
-    position: relative !important;
+.rat-content > .relative {
+    height: 100%;
+}
+
+.rat-content > .relative product-view-media {
+    display: block;
+    height: inherit;
+}
+
+.card9 .card9-wrap-details {
+    position:  relative !important;
+}
+
+.grid-product-list .product-tag {
+    font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    color: #8e8e8e;
+    letter-spacing: 0;
+    line-height: 1;
 }
 
 footer {
@@ -55,26 +99,83 @@ footer {
     min-height: 52px;
 }
 
-@media (min-width: 768px) {
-    
-    .sidebar-bg {
-        flex: 0 0 calc(25% - 8px);
-    }
+.charged {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
 
-    .content-bg {
-        flex: 0 0 calc(75% - 8px);
-    }
+.charged .card9-wrap {
+    position: relative;
+    animation-iteration-count: 1;
+    animation: fadein 1s forwards ease;
+}
+
+.text-m {
+    font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.c-dark-grey {
+    color: #8e8e8e;
+}
+
+.color-square.color-wrap button {
+    width: auto;
+    height: 12px;
+    overflow: hidden;
+}
+
+.color-square.color-wrap button:first-child {
+    width: 8px;
+    height: 8px;
+    margin-top: 0;
+}
+
+.card9-wrap .rat-content .btn-group {
+    flex-wrap: unset;
+}
+
+.product-size-selector__button {
+    background-color: transparent;
+    min-width: 40px;
+    padding: 8px;
+    border: 0;
+}
+
+.product-size-selector__button:hover {
+    background-color: #8e8e8e;
+    color: #fff;
+    cursor: pointer;
+}
+
+.title-s {
+    font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.guide ul {
+    margin-bottom: 20px;
+}
+
+.guide ul li {
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 // Grid
-
 $grid-cols--4A: 4;
 
 .grid-product-wrap--4E {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  gap: 20px;
+  gap: 16px;
+  margin: 0 8px 16px;
   width: 100%;
 
   @media (min-width: 768px) {
@@ -86,4 +187,30 @@ $grid-cols--4A: 4;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
+}
+
+// Media Queries
+@media (min-width: 768px) {
+    
+    .sidebar-bg {
+        flex: 0 0 calc(25% - 8px);
+    }
+
+    .content-bg {
+        flex: 0 0 calc(75% - 8px);
+    }
+
+    .color-square.color-wrap button:first-child {
+        width: 8px;
+        height: 8px;
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .text-m {
+        font-size: 11px;
+        line-height: 1.5;
+    }
 }

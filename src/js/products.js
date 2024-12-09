@@ -2,6 +2,15 @@ function loadProducts(products) {
     const productList = document.getElementById('product-list');
 
     products.forEach(product => {
+        const container = document.createElement('div');
+        container.classList.add('n4a-item', 'sk-load2');
+
+        const productView = document.createElement('product-view');
+        productView.classList.add('p-view');
+
+        const chargedContainer = document.createElement('div');
+        chargedContainer.classList.add('charged');
+
         const productItem = document.createElement('div');
         productItem.classList.add('card9-wrap');
         productItem.innerHTML = `
@@ -9,17 +18,19 @@ function loadProducts(products) {
                 <div class="js-card9-inner rat-2-3">
                     <div class="rat-content">
                         <div class="relative">
-                            <div class="product-view-wrap">
-                                <picture>
-                                    <a class="card9-link" href="${product.url}">
-                                        <div class="img-poster">
-                                            <img class="card9-image" src="${product.image}" alt="${product.title}" />
-                                        </div>
-                                    </a>
-                                </picture>
-                            </div>
-                            <div class="card9-add text-center">
-                                <div class="title-s mb-8 quickly-add-cart">ADD SIZE</div>
+                            <product-view-media>
+                                <div class="product-view-wrap">
+                                    <picture>
+                                        <a class="card9-link" href="${product.url}">
+                                            <div class="img-poster">
+                                                <img class="card9-image" src="${product.image}" alt="${product.title}" />
+                                            </div>
+                                        </a>
+                                    </picture>
+                                </div>
+                            </product-view-media>
+                            <product-view-addtocart class="card9-add text-center">
+                                <div class="title-s mb-8 quickly-add-cart">AÑADIR TALLA</div>
                                 <product-size-selector class="is-flex content-center">
                                     <ul class="btn-group product-size-selector list-clear">
                                         ${product.sizes.map(size => `
@@ -31,11 +42,11 @@ function loadProducts(products) {
                                         `).join('')}
                                     </ul>
                                 </product-size-selector>
-                            </div>
+                            </product-view-addtocart>
                         </div>
                     </div>
                 </div>
-                <div class="card9-wrap-details">
+                <product-view-details class="card9-wrap-details">
                     <div class="card9-contents">
                         <div class="is-flex content-sp-between mb-4">
                             <div class="text-m ttu product-title name-width-product has-ellipsis product-with-colors">
@@ -69,10 +80,13 @@ function loadProducts(products) {
                             <span class="product-tag title-s pr-8">${product.tag}</span>
                         </div>
                     </div>
-                </div>
+                </product-view-details>
             </div>
         `;
-        productList.appendChild(productItem);
+        chargedContainer.appendChild(productItem);
+        productView.appendChild(chargedContainer);
+        container.appendChild(productView);
+        productList.appendChild(container);
     });
 }
 
