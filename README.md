@@ -86,7 +86,7 @@ El diseño se adapta a diferentes tamaños de pantalla mediante:
 ### Estructura Semántica y Accesible del HTML
 
 Se han utilizado las siguientes prácticas:
-- **Etiquetas semánticas** como `<header>`, `<nav>`, `<sction>`, `<footer>`.
+- **Etiquetas semánticas** como `<header>`, `<nav>`, `<section>`, `<footer>`.
 - Atributos de accesibilidad como `alt` para imágenes y roles para los elementos interactivos.
   
 ### Limpieza y Organización del Código
