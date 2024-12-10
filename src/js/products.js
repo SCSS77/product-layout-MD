@@ -1,7 +1,8 @@
-function loadProducts(products) {
-    const productList = document.getElementById('product-list');
+function loadProductsToSection(products, sectionId, numberOfProducts) {
+    const productList = document.getElementById(sectionId);
+    const productsToShow = products.slice(0, numberOfProducts);
 
-    products.forEach(product => {
+    productsToShow.forEach(product => {
         const container = document.createElement('div');
         container.classList.add('n4a-item', 'sk-load2');
 
@@ -201,4 +202,5 @@ const products = [
     }
 ];
 
-loadProducts(products);
+loadProductsToSection(products, 'product-list-section2', 2);
+loadProductsToSection(products, 'product-list', 12);
