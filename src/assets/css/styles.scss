@@ -181,7 +181,7 @@ $grid-cols--4A: 4;
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 16px;
   }
 }
 
