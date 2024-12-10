@@ -210,3 +210,21 @@ $grid-cols--4A: 4;
         line-height: 1.5;
     }
 }
+
+@media (max-width: 768px) {
+
+    h1.h2 {
+        margin: auto;
+    }
+
+    .align-multi-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .align-multi-center button {
+        margin-bottom: 0;
+    }
+}
