@@ -1,6 +1,11 @@
 // Variables
+$pink: lightcoral;
+$blue: lightblue;
 $special-price-bg: rgb(255, 206, 78);
 $special-price-text: black;
+$gray: #333;
+$light-gray: #8e8e8e;
+$dark-gray: #DDD;
 
 // Fonts
 @font-face {
@@ -11,7 +16,7 @@ $special-price-text: black;
 }
 
 // Global Styles
-body {
+html body {
     font-family: "dutti-daily-regular", Helvetica, Arial, sans-serif;
     font-weight: 500;
     -webkit-overflow-scrolling: touch;
@@ -23,15 +28,15 @@ body {
 
 // Components
 .header-bg {
-    background-color: lightcoral;
+    background-color: $pink;
 }
 
 .sidebar-bg {
-    background-color: lightblue;
+    background-color: $blue;
 }
 
 .content-bg {
-    background-color: #333;
+    background-color: $gray;
 }
 
 .sidebar-bg, 
@@ -42,8 +47,8 @@ body {
 }
 
 .d-price-special {
-    background-color: rgb(255, 206, 78); 
-    color: black; 
+    background-color: $special-price-bg; 
+    color: $special-price-text; 
     display: inline-table; 
     padding: 2px 4px; 
     float: left; 
@@ -87,13 +92,13 @@ body {
     font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
     font-weight: 500;
     font-size: 10px;
-    color: #8e8e8e;
+    color: $light-gray;
     letter-spacing: 0;
     line-height: 1;
 }
 
-footer {
-    background-color: #DDD;
+.footer {
+    background-color: $dark-gray;
     align-items: center;
     flex: 0 0 100%;
     min-height: 52px;
@@ -111,15 +116,15 @@ footer {
     animation: fadein 1s forwards ease;
 }
 
-.text-m {
+.grid-product-wrap--4E .text-m {
     font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
     font-weight: 500;
     font-size: 11px;
     line-height: 1.5;
 }
 
-.c-dark-grey {
-    color: #8e8e8e;
+.grid-product-wrap--4E .c-dark-grey {
+    color: $light-gray;
 }
 
 .color-square.color-wrap button {
@@ -146,25 +151,16 @@ footer {
 }
 
 .product-size-selector__button:hover {
-    background-color: #8e8e8e;
+    background-color: $light-gray;
     color: #fff;
     cursor: pointer;
 }
 
-.title-s {
+.grid-product-wrap--4E .title-s {
     font-family: "dutti-daily-regular", Helvetica, arial, sans-serif;
     font-weight: 500;
     font-size: 10px;
     line-height: 1.4;
-}
-
-.guide ul {
-    margin-bottom: 20px;
-}
-
-.guide ul li {
-    font-size: 14px;
-    line-height: 1.5;
 }
 
 // Grid
@@ -209,7 +205,7 @@ $grid-cols--4A: 4;
 
 @media (min-width: 992px) {
 
-    .text-m {
+    .grid-product-wrap--4E .text-m {
         font-size: 11px;
         line-height: 1.5;
     }
