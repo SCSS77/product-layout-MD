@@ -174,6 +174,10 @@ $grid-cols--4A: 4;
   margin: 0 8px 16px;
   width: 100%;
 
+  &-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
   @media (min-width: 768px) {
     gap: 16px;
     grid-template-columns: repeat(3, 1fr);
@@ -186,7 +190,20 @@ $grid-cols--4A: 4;
 }
 
 // Media Queries
+@media (min-width: 1px) {
+
+    header .fluid-2-r {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
 @media (min-width: 768px) {
+
+    header .fluid-2-r {
+        font-size: 28px;
+        line-height: 42px;
+    }
     
     .sidebar-bg {
         flex: 0 0 calc(25% - 8px);
