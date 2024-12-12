@@ -1,28 +1,25 @@
-function showSection(sectionId, headerText) {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-      section.classList.add('hidden');
-    });
-  
-    const selectedSection = document.getElementById(sectionId);
-    if (selectedSection) {
-      selectedSection.classList.remove('hidden');
-    }
-  
-    const links = document.querySelectorAll('.app_tabs-item');
-    links.forEach(link => {
-      link.classList.remove('is-active');
-    });
-  
-    const activeLink = Array.from(links).find(link => link.querySelector('a').getAttribute('onclick').includes(sectionId));
-    if (activeLink) {
-      activeLink.classList.add('is-active');
-    }
+function showSection() {
+  const tabs = document.querySelectorAll('.app_tabs-item a');
+  const sections = document.querySelectorAll('section');
+  const header = document.querySelector('.app_title');
 
-    const header = document.querySelector('.app_title');
-    if (header) {
-      header.textContent = headerText;
-    }
-  }
+  tabs.forEach(tab => {
+      tab.addEventListener('click', event => {
+          event.preventDefault();
+          sections.forEach(section => section.classList.add('hidden'));
+          const sectionId = tab.dataset.section;
+          const targetSection = document.getElementById(sectionId);
+          if (targetSection) {
+              targetSection.classList.remove('hidden');
+          }
+          const headerText = tab.getAttribute('aria-label');
+          if (header) {
+              header.textContent = headerText;
+          }
+          tabs.forEach(t => t.parentElement.classList.remove('is-active'));
+          tab.parentElement.classList.add('is-active');
+      });
+  });
+}
 
-  window.showSection = showSection;
+document.addEventListener('DOMContentLoaded', showSection);
